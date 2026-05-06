@@ -1,0 +1,31 @@
+Подгрузка пользователей из API в Postgress.
+3 отдельные таблицы users,adress,company.
+Реалезовать внешние ключи.
+
+API: https://jsonplaceholder.typicode.com/users
+
+
+
+sql:
+create table users(
+	id serial primary key,
+	name varchar,
+	username varchar,
+	email varchar,
+	phone varchar
+);
+create table adress(
+	id serial,
+	user_id serial REFERENCES users(id),
+	street varchar,
+	suite varchar,
+	city varchar,
+	zipcode varchar
+);
+create table company(
+	id serial,
+	user_id serial REFERENCES users(id),
+	name varchar,
+	catchPhrase varchar,
+	bs varchar
+)
