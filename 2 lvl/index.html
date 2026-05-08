@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Todo App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Список задач</h1>
+
+  <div class="filters">
+    <input id="search" placeholder="Поиск..." />
+    <select id="status">
+      <option value="all">Все</option>
+      <option value="completed">Выполненные</option>
+      <option value="not_completed">Невыполненные</option>
+    </select>
+  </div>
+
+  <p id="count"></p>
+
+  <div id="tasks"></div>
+
+  <div id="modal" class="modal hidden"></div>
+
+  <script src="Backend.js"></script>
+</body>
+</html>
